@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataVisualizer</title>
     <link rel="stylesheet" href="dataVisualizer.css">
 </head>
+
 <body>
     <header>
         <h1>Data Visualizer</h1>
-        <select id="category">
-            <option value="covid">COVID_19 cases</option>
-        </select>
+        <button id="darkModeToggle">Dark Mode</button>
     </header>
+    <main>
+        <label for="matchSelect">Select Match:</label>
+        <select id="matchSelect"></select>
+        <canvas id="chartCanvas"></canvas>
+    </main>
+    <script src="visualizer.js"></script>
+    <script src="dataFetcher.js"></script>
+    <script src="eventHandler.js\"></script>
 </body>
+
 </html>
