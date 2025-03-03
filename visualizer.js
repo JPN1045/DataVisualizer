@@ -1,14 +1,14 @@
 let matchChart;
 
 function renderCricketChart(match) {
-    const ctx = document.getElementById('match-chart').getContext('2d');
+    const ctx = document.getElementById('chartCanvas').getContext('2d');
     if (matchChart) matchChart.destroy();
 
-    const labels = [match.teamInfo[0].name, match.teamInfo[1].name];
-    const scores = [match.teamInfo[0].score, match.teamInfo[1].score];
+    const labels = [match.teams[0], match.teams[1]];
+    const scores = [match.score[0].r, match.score[1].r];
 
     matchChart = new Chart(ctx, {
-        types: "bar",
+        type: "bar",
         data: {
             labels: labels,
             datasets: [{
